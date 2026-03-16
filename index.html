@@ -32,23 +32,22 @@
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
 
-        /* LASU corner logo */
-        .lasu-corner {
-            position: relative;
-        }
-        .lasu-corner::after {
+        /* LASU corner logo - very top right corner */
+        .reveal .slides section[data-lasu-logo]::before {
             content: '';
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 120px;
-            height: 120px;
+            position: fixed;
+            top: -20px;
+            right: 10px;
+            width: 170px;
+            height: 170px;
             background-image: url('lasu-campus.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.3;
+            opacity: 0.5;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            pointer-events: none;
         }
 
         /* Compact slide for content-heavy slides */
@@ -79,11 +78,12 @@
         <div class="slides">
 
             <!-- Slide 1: Title -->
-            <section class="lasu-corner">
+            <section data-lasu-logo>
                 <h1>🎓⚙️ Staying Fit & Healthy After 45</h1>
                 <h3>A 14-Year Journey of Transformation</h3>
                 <p><span class="lasu-badge">For LASU Engineers - Class of 2001 Set</span></p>
                 <p>Presenter: Engr. Dejo Avognon</p>
+                <p>March 2026</p>
                 <aside class="notes">
                     Good morning/afternoon my fellow LASU Engineers! From those days at Epe campus - the lab sessions, the project defenses, solving thermodynamics problems, surviving Engineering Mathematics - we made it through together. Class of 2001 set, the Greatest Lasuites! Today, I want to share something more valuable than any engineering degree - the gift of health and vitality as we navigate life after 45.
                     Greetings & Recognition to our facilitators.
@@ -91,7 +91,7 @@
             </section>
 
             <!-- Slide 2: Welcome -->
-            <section class="lasu-corner">
+            <section data-lasu-logo>
                 <h2><span class="lasu-badge">Greatest Lasuites! Once a Lasuite, Always a Lasuite!</span></h2>
                 <ul>
                     <li>From Epe Engineering Campus to Global Excellence</li>
@@ -404,7 +404,7 @@
             </section>
 
             <!-- Slide 14: Exercise with Community -->
-            <section class="lasu-corner">
+            <section data-lasu-logo>
                 <h2>Stronger Together: The Power of Group Exercise</h2>
                 <div class="two-column small-text">
                     <div>
@@ -764,7 +764,7 @@
             </section>
 
             <!-- Slide 26: Final Words -->
-            <section class="lasu-corner compact-slide">
+            <section data-lasu-logo class="compact-slide">
                 <h2>The Legacy We Leave - This is About More Than Us</h2>
                 <div class="two-column small-text">
                     <div>
@@ -833,7 +833,7 @@
             </section>
 
             <!-- Final Slide -->
-            <section class="lasu-corner">
+            <section data-lasu-logo>
                 <h1>🎓⚙️💪</h1>
                 <h2><span class="lasu-badge">Once a Lasuite, Always a Lasuite</span></h2>
                 <h3 class="green">The Greatest Lasuites Choose Health!</h3>
